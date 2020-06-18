@@ -58,7 +58,7 @@ xyplot(top ~ p.q50 | variable, data=agg, ylab='Profundidad (cm)',
 dev.off()
 dev.off()
 dev.off()
-```
+
 
 ### Spline pH and ESP
 
@@ -100,10 +100,9 @@ print(Sys.time() - start)
 
 
 ### Removing columns without data or zero(binary variables)
-```{r}
 names(dat_subset)
 dat_subset1 <- dat_subset[,52:155]
 dat_subset1 <- dat_subset1[, colSums(dat_subset1,na.rm = T) != 0]
 dat_subset <- data.frame(dat_subset[,1:50],dat_subset1)
+dim(dat_subset)
 write.csv(dat_subset, 'G:\\My Drive\\IGAC_2020\\SALINIDAD\\R_CODES\\PRUEBAPILOTOCVC\\RegMatrix_VF_COL.csv',row.names = F)
-```
