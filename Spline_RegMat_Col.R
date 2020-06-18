@@ -10,14 +10,14 @@ library(sp)
 library(caret)
 library(dplyr)
 library(doParallel)
-library(ranger)
 library(GSIF)
 library(aqp)
 library(lime)
 library(caret)#neural network
 library(reticulate)
 library(magrittr) #pipe operator
-library(randomForest)
+
+
 
 ### Profiles and sites datasets loading 
 
